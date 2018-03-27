@@ -7,6 +7,9 @@ package com.zak.ai;
  *
  */
 public interface CellEnvironment {
+	// Set the liveness of a specific cell
+	public abstract void setCellAlive(int x, int y, boolean alive);
+	
 	// Evaluate and store the next state
 	public abstract void evaluateNextState();
 	

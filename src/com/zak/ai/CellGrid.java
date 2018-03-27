@@ -24,7 +24,7 @@ public class CellGrid implements CellEnvironment {
 		}
 	}
 	
-	// Set the liveness of a specific cell
+	@Override
 	public void setCellAlive(int x, int y, boolean alive) {
 		if (x < rows && y < columns) {
 			this.cells[x][y] = new Cell(alive);
