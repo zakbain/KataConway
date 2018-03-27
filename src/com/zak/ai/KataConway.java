@@ -11,15 +11,15 @@ public class KataConway {
 		int columns = 0;
 		int rows = 0;
 		try {
-			columns = Integer.parseInt(args[0]);
-			rows  = Integer.parseInt(args[1]);
+			rows = Integer.parseInt(args[0]);
+			columns = Integer.parseInt(args[1]);
 		} catch (NumberFormatException e) {
 			return;
 		}
 		
 		// Continue if we were able to get greater than 0 integer values for rows and columns
-		if (columns > 0 && rows > 0) {
-			
+		if (columns <= 0 || rows <= 0) {
+			return;
 		}
 	}
 }
