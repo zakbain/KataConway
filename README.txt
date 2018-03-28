@@ -21,8 +21,12 @@ How to Run
 	c. Navigate to the directory where you put KataConway
 	d. Finish
 	e. Click the dropdown next to the play or debug button
-	f. Press arguments tab. Add the arguments x y inFileName.txt outFileName.txt
+	f. Press Run Configurations
+	g. If a KataConway configuration does not already exist, create one. Make sure
+		the project is KataConway and the Main Class is com.zak.ai.KataConway
+	h. Press arguments tab. Add the arguments x y inFileName.txt outFileName.txt
 		e.g: java -jar Kata.jar 6 8 test1.txt output1.txt
+	i. Press the Run (play) button
 		
 		
 Files
