@@ -3,23 +3,33 @@ package com.zak.ai;
 public class KataConway {
 	public static void main(String[] args) {
 		// Validate arguments
-		if (args.length < 2) {
+		if (args.length < 3) {
 			System.out.println("Must have at least two arguments to run this program");
 			return;
 		}
 		
-		int columns = 0;
-		int rows = 0;
+		int width = 0;
+		int height = 0;
+		String fileName = "";
+		
 		try {
-			rows = Integer.parseInt(args[0]);
-			columns = Integer.parseInt(args[1]);
+			height = Integer.parseInt(args[0]);
+			width = Integer.parseInt(args[1]);
+			fileName = args[2];
 		} catch (NumberFormatException e) {
 			return;
 		}
 		
 		// Continue if we were able to get greater than 0 integer values for rows and columns
-		if (columns <= 0 || rows <= 0) {
+		if (width <= 0 || height <= 0) {
 			return;
 		}
+		
+		CellWorld konwayCells = new CellGrid(height, width);
+		WorldPainter.readWorld(konwayCells, fileName);
+		konwayCells.evaluateNextState();
+		konwayCells.advanceState();
+		
+		WorldPainter.printWorld(konwayCells, "cellSnapshot.txt");
 	}
 }
