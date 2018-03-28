@@ -2,6 +2,18 @@ KataConway
 Solution by Zak  Bainazarov
 ==========================
 
+Input and Output format
+==========================
+x - dead cell
+o - live cell
+
+For example:
+ooo
+xxx
+
+The first three are alive. Second three are dead. Input files should be plain text with just o's and x's. 
+I trust you won't diverge but there's some error checking just in case you do.
+
 How to Run 
 ==========================
 1. Command line
@@ -34,6 +46,7 @@ Files
 KataConway.java - File with main for running a single conway state 
 WorldPainter.java -  Handles reading and writing of files 
 CellGrid.java - Implementation of CellWorld as a two dimensional array
+CellGridTest.java - Test class for CellGrid
 CellWorld.java - Interface for holding the state of the game/world and handling 
 	advancement
 Cell.java - A single cell
