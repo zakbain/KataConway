@@ -13,18 +13,18 @@ public interface CellWorld {
 	
 	public abstract boolean isCellAlive(int x, int y);
 	
+	// Cell liveliness in the next state
 	public abstract boolean isCellAliveNext(int x, int y);
 	
 	// Evaluate and store the next state
 	public abstract void evaluateNextState();
 	
-	// Advance to the next state
+	// Advance to the next state. True if advance succeeded
 	public abstract boolean advanceState();
 	
 	// Report height
 	public abstract int getHeight();
 	
-	// 
 	public abstract void setHeight(int height);
 	
 	// Report width

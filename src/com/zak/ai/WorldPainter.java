@@ -30,6 +30,7 @@ public class WorldPainter {
 				rowCount++;
 			}
 			
+			bubbleReader.close();
 		}
 		catch(Exception e) {
 			System.out.println("Error reading file");
@@ -57,11 +58,13 @@ public class WorldPainter {
 			}
 
 			bubbleWriter.flush();
+			bubbleWriter.close();
 		} catch (IOException e) {
 			System.out.println("Error writing to file");
 		}
 	}
 	
+	// Read a string row into the cell world
 	private static void readRow(CellWorld cellWorld, String row, int rowCount) {
 		int width = Integer.min(cellWorld.getWidth(), row.length());
 

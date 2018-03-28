@@ -10,12 +10,14 @@ public class KataConway {
 		
 		int width = 0;
 		int height = 0;
-		String fileName = "";
+		String inFileName = "";
+		String outFileName  = "";
 		
 		try {
 			height = Integer.parseInt(args[0]);
 			width = Integer.parseInt(args[1]);
-			fileName = args[2];
+			inFileName = args[2];
+			outFileName = args[3];
 		} catch (NumberFormatException e) {
 			return;
 		}
@@ -26,10 +28,10 @@ public class KataConway {
 		}
 		
 		CellWorld konwayCells = new CellGrid(height, width);
-		WorldPainter.readWorld(konwayCells, fileName);
+		WorldPainter.readWorld(konwayCells, inFileName);
 		konwayCells.evaluateNextState();
 		konwayCells.advanceState();
 		
-		WorldPainter.printWorld(konwayCells, "cellSnapshot.txt");
+		WorldPainter.printWorld(konwayCells, outFileName);
 	}
 }
